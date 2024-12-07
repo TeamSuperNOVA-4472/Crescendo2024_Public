@@ -1,0 +1,31 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.2440040920182094,
+      "y": 2.736432139530946
+    },
+    "rotation": 112.52056560289685
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Farthest Part 1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Farthest Part 2"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

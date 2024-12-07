@@ -1,0 +1,27 @@
+{
+  "location": {
+    "front": -12.375,
+    "left": -11.375
+  },
+  "absoluteEncoderOffset": 150.2,
+  "drive": {
+    "type": "talonfx",
+    "id": 6,
+    "canbus": "canivore"
+  },
+  "angle": {
+    "type": "talonfx",
+    "id": 7,
+    "canbus": "canivore"
+  },
+  "encoder": {
+    "type": "cancoder",
+    "id": 1,
+    "canbus": "canivore"
+  },
+  "inverted": {
+    "drive": false,
+    "angle": true
+  },
+  "absoluteEncoderInverted": false
+}

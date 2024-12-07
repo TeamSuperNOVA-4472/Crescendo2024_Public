@@ -1,0 +1,503 @@
+[2023-11-17 06:45:01] [General - Main] [INFO] Native libraries loaded.
+[2023-11-17 06:45:01] [Camera - RknnDetectorJNI] [INFO] Successfully loaded shared object librga.so
+[2023-11-17 06:45:01] [Camera - RknnDetectorJNI] [INFO] Successfully loaded shared object librknnrt.so
+[2023-11-17 06:45:01] [Camera - RknnDetectorJNI] [INFO] Successfully loaded shared object librknn_jni.so
+[2023-11-17 06:45:02] [Camera - RknnDetectorJNI] [INFO] Successfully loaded shared object libmrcal_jni.so
+[2023-11-17 06:45:02] [General - Main] [INFO] Logging initialized in debug mode.
+[2023-11-17 06:45:02] [General - Main] [INFO] Starting PhotonVision version v2024.2.0 on Linux AARCH 64-bit with RK3588
+[2023-11-17 06:45:02] [General - Main] [DEBUG] Loading ConfigManager...
+[2023-11-17 06:45:02] [Config - SqlConfigProvider] [DEBUG] Using database /opt/photonvision/photonvision_config/photon.sqlite
+[2023-11-17 06:45:02] [Config - SqlConfigProvider] [INFO] Using correct database version: 2
+[2023-11-17 06:45:02] [Config - SqlConfigProvider] [DEBUG] Loading config...
+[2023-11-17 06:45:02] [Config - SqlConfigProvider] [ERROR] Could not deserialize apriltag layout! Loading defaults
+[2023-11-17 06:45:02] [Camera - CameraConfiguration] [DEBUG] Creating camera configuration for UsbCamera Arducam OV9281 USB Camera (AKA Arducam_OV9281_USB_Camera) at /dev/video0
+[2023-11-17 06:45:02] [General - Main] [DEBUG] Loading HardwareManager...
+[2023-11-17 06:45:02] [General - Main] [DEBUG] Loading NetworkManager...
+[2023-11-17 06:45:02] [General - NetworkManager] [INFO] Setting DHCP with team 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "cat /etc/hostname | tr -d " \t\n\r""
+[2023-11-17 06:45:02] [General - NetworkTablesManager] [INFO] Starting NT Client, server team is 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "echo photonvision > /etc/hostname"
+[2023-11-17 06:45:02] [General - NetworkTablesManager] [ERROR] [NetworkTablesManager] Could not connect to the robot! Will retry in the background...
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "hostnamectl set-hostname photonvision"
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "sed -i "s/127.0.1.1.*photonvision/127.0.1.1\tphotonvision/g" /etc/hosts"
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "sudo service avahi-daemon restart"
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - NetworkManager] [INFO] Set hostname to photonvision
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "nmcli con mod "netplan-eth0" ipv4.method "auto" ipv6.method "disabled""
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:45:02] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:45:02] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:45:02] [General - NetworkManager] [ERROR] Exception while setting DHCP!
+[2023-11-17 06:45:02] [General - Main] [DEBUG] Loading NetworkTablesManager...
+[2023-11-17 06:45:02] [General - Main] [INFO] Loading ML models
+[2023-11-17 06:45:02] [Config - NeuralNetworkModelManager] [INFO] File /opt/photonvision/photonvision_config/models/note-640-640-yolov5s.rknn already exists. Skipping extraction.
+[2023-11-17 06:45:02] [Config - NeuralNetworkModelManager] [INFO] File /opt/photonvision/photonvision_config/models/labels.txt already exists. Skipping extraction.
+[2023-11-17 06:45:02] [General - Main] [DEBUG] Loading VisionSourceManager...
+[2023-11-17 06:45:02] [General - Main] [INFO] Starting server...
+[2023-11-17 06:45:02] [WebServer - DataChangeService] [DEBUG] Added subscriber - Sources: DCS_WEBSOCKET, DCS_HTTP, DCS_NETWORKTABLES, DCS_VISIONMODULE, DCS_OTHER, Destinations: DCD_WEBSERVER
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Matching 1 new cameras!
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [INFO] Adding local video device - "Arducam OV9281 USB Camera" at "/dev/video0"
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Trying to match 1 unmatched configs...
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Trying to find a match for loaded camera Arducam OV9281 USB Camera with path-by-id /dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9281_USB_Camera_UC762-video-index0
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Matched the config for Arducam OV9281 USB Camera to a physical camera!
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Skipping matchByPath no configs or cameras left to match
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Skipping matchByName no configs or cameras left to match
+[2023-11-17 06:45:02] [Camera - VisionSourceManager] [DEBUG] Matched or created 1 camera configs!
+[2023-11-17 06:45:03] [Camera - VisionSourceManager] [DEBUG] Creating VisionSource for CameraConfiguration [baseName=Arducam OV9281 USB Camera, uniqueName=Arducam_OV9281_USB_Camera, nickname=Arducam_OV9281_USB_Camera, path=/dev/video0, otherPaths=[/dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9281_USB_Camera_UC762-video-index0, /dev/v4l/by-path/platform-fc880000.usb-usb-0:1:1.0-video-index0], cameraType=UsbCamera, cameraQuirks=QuirkyCamera [baseName=Arducam OV9281 USB Camera, displayName=, usbVid=3141, usbPid=25446, quirks={CompletelyBroken=false, ArduCamCamera=true, FPSCap100=false, AWBGain=false, AdjustableFocus=false, ArduOV2311=false, PiCam=false, ArduOV9281=false, Gain=false, StickyFPS=true}], FOV=70.0, calibrations=[], currentPipelineIndex=0, streamIndex=0, pipelineSettings=[CVPipelineSettings{pipelineIndex=0, pipelineType=Reflective, inputImageRotationMode=DEG_0, pipelineNickname='New Pipeline', cameraExposure=6.0, cameraBrightness=50, cameraGain=-1, cameraRedGain=-1, cameraBlueGain=-1, cameraVideoModeIndex=0, streamingFrameDivisor=NONE, ledMode=true, inputShouldShow=false, outputShouldShow=true}], driveModeSettings=CVPipelineSettings{pipelineIndex=-1, pipelineType=DriverMode, inputImageRotationMode=DEG_0, pipelineNickname='Driver Mode', cameraExposure=20.0, cameraBrightness=50, cameraGain=75, cameraRedGain=11, cameraBlueGain=20, cameraVideoModeIndex=0, streamingFrameDivisor=NONE, ledMode=false, inputShouldShow=true, outputShouldShow=true}]
+[2023-11-17 06:45:03] [Camera - USBCameraSource - Arducam_OV9281_USB_Camera] [INFO] Quirky camera detected: Arducam OV9281 USB Camera
+[2023-11-17 06:45:03] [WebServer - DataChangeService] [DEBUG] Added subscriber - Sources: DCS_WEBSOCKET, DCS_HTTP, DCS_NETWORKTABLES, DCS_VISIONMODULE, DCS_OTHER, Destinations: DCD_UI
+[2023-11-17 06:45:03] [WebServer - DataChangeService] [DEBUG] Added subscriber - Sources: DCS_WEBSOCKET, Destinations: DCD_GENSETTINGS
+[2023-11-17 06:45:03] [Camera - VisionSourceManager] [DEBUG] Matched config for camera "USBFrameProvider - opencv_Arducam_OV9281_USB_Camera" and loaded 1 pipelines
+[2023-11-17 06:45:03] [Camera - VisionSourceManager] [INFO] Adding 1 configs to VMM.
+[2023-11-17 06:45:03] [WebServer - DataChangeService] [DEBUG] Added subscriber - Sources: DCS_WEBSOCKET, DCS_HTTP, DCS_NETWORKTABLES, DCS_VISIONMODULE, DCS_OTHER, Destinations: DCD_ACTIVEMODULE, DCD_ACTIVEPIPELINESETTINGS, DCD_GENSETTINGS, DCD_UI, DCD_WEBSERVER, DCD_OTHER
+[2023-11-17 06:45:03] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to 0
+[2023-11-17 06:45:03] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:45:03] [VisionModule - PipelineManager] [DEBUG] Creating Reflective pipeline
+[2023-11-17 06:45:03] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 320 Height: 240 Pixel Format: kMJPEG
+[2023-11-17 06:45:04] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:45:04] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:45:04] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:45:04] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 6
+[2023-11-17 06:45:04] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:45:04] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 6
+[2023-11-17 06:45:06] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:45:06] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:45:06] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:00] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /index.html for host 10.44.72.179 in 9.461376 ms
+[2023-11-17 06:47:00] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint / for host 10.44.72.179 in 37.400127 ms
+[2023-11-17 06:47:00] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/index-19c03305.js for host 10.44.72.179 in 2.496959 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/index-8cf6e462.css for host 10.44.72.179 in 132.19385 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/logoLarge-7c0b93cf.svg for host 10.44.72.179 in 2.219 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/loading-0f0dc28b.svg for host 10.44.72.179 in 3.269 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/materialdesignicons-webfont-662fefa8.woff2 for host 10.44.72.179 in 2.291042 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /assets/prompt-latin-400-normal-b7be1a25.woff2 for host 10.44.72.179 in 3.761626 ms
+[2023-11-17 06:47:01] [WebServer - Server] [DEBUG] Handled HTTP request of type GET from endpoint /favicon.ico for host 10.44.72.179 in 4.70925 ms
+[2023-11-17 06:47:04] [WebServer - DataSocketHandler] [INFO] New websocket connection from /10.44.72.179:54778
+[2023-11-17 06:47:04] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:47:04] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:47:04] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 10
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 19
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 23
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 30
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 52
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 59
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 73
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 82
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 96
+[2023-11-17 06:47:20] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:47:22] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:22] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:22] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:26] [VisionModule - PipelineManager] [INFO] Adding new pipe of type AprilTag at idx 0
+[2023-11-17 06:47:26] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:47:26] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:47:26] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:47:26] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:47:26] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to 0
+[2023-11-17 06:47:26] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:47:26] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:47:26] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 320 Height: 240 Pixel Format: kMJPEG
+[2023-11-17 06:47:26] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:47:26] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:47:27] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:47:28] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:28] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:28] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 23
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 28
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 54
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 60
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 66
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:30] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 79
+[2023-11-17 06:47:31] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 86
+[2023-11-17 06:47:31] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 89
+[2023-11-17 06:47:31] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 93
+[2023-11-17 06:47:31] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:47:32] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:32] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:32] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:40] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:40] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:40] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:43] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:43] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:43] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:45] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:47:45] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 99
+[2023-11-17 06:47:45] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 98
+[2023-11-17 06:47:45] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 97
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 94
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 92
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 90
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 88
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 86
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 85
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 83
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 82
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 80
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 80
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 79
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 78
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 77
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 77
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 76
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 75
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 74
+[2023-11-17 06:47:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 74
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 73
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 72
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 72
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 70
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 70
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 70
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 70
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 69
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 69
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 69
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 69
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 68
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 68
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 68
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 67
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 67
+[2023-11-17 06:47:47] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 66
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 65
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 65
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 64
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 64
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 62
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 61
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 60
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 59
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 58
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 57
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 57
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 56
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 56
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 56
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 55
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 55
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 54
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 52
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 52
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 50
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 49
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 47
+[2023-11-17 06:47:48] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:49] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 40
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 40
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 40
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 40
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:50] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 35
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 35
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 35
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 35
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 35
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to true
+[2023-11-17 06:47:52] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:52] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:53] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:55] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:47:55] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:57] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:47:57] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:47:57] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 34
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 36
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 37
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 38
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 39
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 40
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 41
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 42
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 43
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 44
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 45
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 46
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 47
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 47
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 47
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 47
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 48
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 49
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 49
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 50
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 51
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 52
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 54
+[2023-11-17 06:47:58] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 57
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 60
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 62
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 64
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 66
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 69
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 71
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 72
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 74
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 75
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 76
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 77
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 79
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 80
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 82
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 84
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 85
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 86
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 88
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 91
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 92
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 93
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 99
+[2023-11-17 06:47:59] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:48:06] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:06] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:06] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:09] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:09] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:09] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:17] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:48:20] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:20] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:20] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:21] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 120 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:48:24] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:24] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:24] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:36] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 320 Height: 240 Pixel Format: kMJPEG
+[2023-11-17 06:48:37] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Starting calibration at resolution index 0 and settings UICalibrationData{videoModeIndex=0, count=0, minCount=12, hasEnough=false, squareSizeIn=1.0, patternWidth=8, patternHeight=8, boardType=CHESSBOARD}
+[2023-11-17 06:48:37] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to -2
+[2023-11-17 06:48:37] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:48:37] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:48:37] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:48:37] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:48:38] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 320 Height: 240 Pixel Format: kMJPEG
+[2023-11-17 06:48:38] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:48:38] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to true
+[2023-11-17 06:48:39] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:39] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:39] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:45] [WebServer - RequestHandler] [INFO] Calibrating camera! This will take a long time...
+[2023-11-17 06:48:45] [General - Calibrate3dPipeline] [INFO] Not enough snapshots! Only got 0 of 12 -- returning null..
+[2023-11-17 06:48:45] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:48:45] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:48:45] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:48:45] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:48:45] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to 0
+[2023-11-17 06:48:45] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:48:45] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:48:45] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 120 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:48:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:48:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:48:46] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:48:46] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [ERROR] Calibration failed...
+[2023-11-17 06:48:46] [WebServer - RequestHandler] [ERROR] The calibration process failed. Calibration data for module at index (0) was null
+[2023-11-17 06:48:46] [WebServer - Server] [DEBUG] Handled HTTP request of type POST from endpoint /api/calibration/end for host 10.44.72.179 in 1199.8264 ms
+[2023-11-17 06:48:48] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:48] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:48] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:48:56] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:48:57] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Starting calibration at resolution index 2 and settings UICalibrationData{videoModeIndex=2, count=0, minCount=12, hasEnough=false, squareSizeIn=1.0, patternWidth=8, patternHeight=8, boardType=CHESSBOARD}
+[2023-11-17 06:48:57] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to -2
+[2023-11-17 06:48:57] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:48:57] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:48:57] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:48:57] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:48:57] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 100 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:48:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:48:57] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to true
+[2023-11-17 06:48:59] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:48:59] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:48:59] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:55:35] [WebServer - RequestHandler] [INFO] Calibrating camera! This will take a long time...
+[2023-11-17 06:55:35] [General - Calibrate3dPipe] [DEBUG] Calibrating with mrcal!
+[2023-11-17 06:55:36] [General - Calibrate3dPipe] [INFO] CALIBRATION SUCCESS for res 640x480 in 346.085868ms! camMatrix: 
+[601.2603922061983, 0.0, 247.7055878654383, 0.0, 598.9329439519873, 248.67170683865174, 0.0, 0.0, 1.0]
+distortionCoeffs:
+[0.06348728672552792, 0.18957154617259733, 0.00650176783184956, -0.019662882986865356, -1.6782093745214552, -0.07169793053059881, -0.02394206598771189, 0.0653735447999469]
+
+[2023-11-17 06:55:36] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:55:36] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:55:36] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:55:36] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:55:36] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to 0
+[2023-11-17 06:55:36] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:55:36] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 06:55:36] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 120 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 06:55:37] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:55:37] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:55:37] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:55:37] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [DEBUG] Saving calibration...
+[2023-11-17 06:55:37] [Camera - CameraConfiguration] [INFO] adding calibration 640x480
+[2023-11-17 06:55:37] [WebServer - RequestHandler] [INFO] Camera calibration successfully completed!
+[2023-11-17 06:55:37] [WebServer - Server] [DEBUG] Handled HTTP request of type POST from endpoint /api/calibration/end for host 10.44.72.179 in 1444.1112 ms
+[2023-11-17 06:55:38] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:55:38] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:55:38] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:05] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to true
+[2023-11-17 06:56:06] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:06] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:06] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:09] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 06:56:09] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 06:56:10] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:10] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:11] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:24] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:24] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:24] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:32] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:32] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:33] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:41] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:41] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:41] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:56:59] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:56:59] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:56:59] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 06:58:50] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 10 Width: 1280 Height: 800 Pixel Format: kYUYV
+[2023-11-17 06:58:51] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Starting calibration at resolution index 8 and settings UICalibrationData{videoModeIndex=8, count=0, minCount=12, hasEnough=false, squareSizeIn=1.0, patternWidth=8, patternHeight=8, boardType=CHESSBOARD}
+[2023-11-17 06:58:51] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to -2
+[2023-11-17 06:58:51] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 06:58:51] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 06:58:51] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 06:58:51] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 06:58:51] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 10 Width: 1280 Height: 800 Pixel Format: kYUYV
+[2023-11-17 06:58:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 20
+[2023-11-17 06:58:51] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to true
+[2023-11-17 06:58:53] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 06:58:53] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 06:58:53] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 07:04:22] [WebServer - RequestHandler] [INFO] Calibrating camera! This will take a long time...
+[2023-11-17 07:04:22] [General - Calibrate3dPipe] [DEBUG] Calibrating with mrcal!
+[2023-11-17 07:04:22] [General - Calibrate3dPipe] [INFO] CALIBRATION SUCCESS for res 1280x800 in 612.585811ms! camMatrix: 
+[899.0762344813835, 0.0, 582.5007498641492, 0.0, 899.9727305033573, 391.9925229224714, 0.0, 0.0, 1.0]
+distortionCoeffs:
+[0.06392997741172131, -0.14617250627333406, -0.0028141985253796074, 0.0021184236390875463, 0.12347874366869462, -0.0025562052933455408, 0.0061265890685662395, -0.005036347734924837]
+
+[2023-11-17 07:04:22] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 07:04:22] [General - ShellExec] [DEBUG] Executing "nmcli -t -f GENERAL.CONNECTION,GENERAL.DEVICE,GENERAL.TYPE device show"
+[2023-11-17 07:04:23] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:04:23] [General - NetworkUtils] [DEBUG] Found network interfaces:
+[NMDeviceInfo [connName=netplan-eth0, devName=eth0, nmType=NMTYPE_ETHERNET], NMDeviceInfo [connName=, devName=lo, nmType=NMTYPE_UNKNOWN]]
+[2023-11-17 07:04:23] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Setting pipeline to 0
+[2023-11-17 07:04:23] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [INFO] Pipeline name: New Pipeline
+[2023-11-17 07:04:23] [VisionModule - PipelineManager] [DEBUG] Creating AprilTag pipeline
+[2023-11-17 07:04:23] [VisionModule - VisionSourceSettables] [INFO] Setting video mode to FPS: 120 Width: 640 Height: 480 Pixel Format: kMJPEG
+[2023-11-17 07:04:24] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 07:04:24] [VisionModule - VisionSourceSettables] [DEBUG] Setting auto exposure to false
+[2023-11-17 07:04:24] [VisionModule - VisionSourceSettables] [DEBUG] Setting camera exposure to 100
+[2023-11-17 07:04:24] [VisionModule - VisionModule - Arducam_OV9281_USB_Camera] [DEBUG] Saving calibration...
+[2023-11-17 07:04:24] [Camera - CameraConfiguration] [INFO] adding calibration 1280x800
+[2023-11-17 07:04:24] [WebServer - RequestHandler] [INFO] Camera calibration successfully completed!
+[2023-11-17 07:04:24] [WebServer - Server] [DEBUG] Handled HTTP request of type POST from endpoint /api/calibration/end for host 10.44.72.179 in 1875.1162 ms
+[2023-11-17 07:04:25] [Config - ConfigManager] [DEBUG] Saving to disk...
+[2023-11-17 07:04:25] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 07:04:26] [Config - SqlConfigProvider] [INFO] Settings saved!
+[2023-11-17 07:05:25] [General - MetricsManager] [DEBUG] Publishing Metrics...
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Executing "top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'"
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Executing "free -m | awk 'FNR == 2 {print $3}'"
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Executing "uptime -p | cut -c 4-"
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Executing "free -m | awk 'FNR == 2 {print $3}'"
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Executing "df ./ --output=pcent | tail -n +2"
+[2023-11-17 07:05:25] [General - ShellExec] [DEBUG] Got exit code 0
+[2023-11-17 07:05:25] [WebServer - Server] [DEBUG] Handled HTTP request of type POST from endpoint /api/utils/publishMetrics for host 10.44.72.179 in 264.9092 ms
+[2023-11-17 07:05:27] [General - ShellExec] [DEBUG] Executing "systemctl restart photonvision.service"
+[2023-11-17 07:05:27] [WebServer - Server] [DEBUG] Handled HTTP request of type POST from endpoint /api/utils/restartProgram for host 10.44.72.179 in 2.533416 ms
+[2023-11-17 07:05:27] [General - ShellExec] [DEBUG] Got exit code 143
+[2023-11-17 07:05:27] [General - HardwareManager] [INFO] Shutting down LEDs...
+[2023-11-17 07:05:27] [General - HardwareManager] [INFO] Force-flushing settings...
+[2023-11-17 07:05:27] [Config - SqlConfigProvider] [DEBUG] Saving to disk
+[2023-11-17 07:05:29] [Config - SqlConfigProvider] [INFO] Settings saved!

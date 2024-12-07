@@ -1,0 +1,43 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.3674521584632144,
+      "y": 5.503726295673142
+    },
+    "rotation": -179.16968451374197
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Amp Part 1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Amp Part 2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Amp Part 3"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Amp Part 4"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

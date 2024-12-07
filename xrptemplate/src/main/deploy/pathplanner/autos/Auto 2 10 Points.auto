@@ -1,0 +1,31 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.2028547365365412,
+      "y": 3.46683319933056
+    },
+    "rotation": 143.13010235415592
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Under Stage Part 1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Auto Under Stage Part 2"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}
